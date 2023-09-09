@@ -56,7 +56,7 @@ class BracketsCheckerApplicationTests {
 				new BracketsCheckerModel(false, "(({}[()]))"),
                 new BracketsCheckerModel(false, "((dd)d)d)d)d]"),
                 new BracketsCheckerModel(false, "(()"),
-                new BracketsCheckerModel(true, "(a (b (c (d (e (f (g (h (i))))))))))"));
+                new BracketsCheckerModel(false, "(a (b (c (d (e (f (g (h (i))))))))))"));
         for (BracketsCheckerModel model : models) {
             Boolean result = bracketsCheckerService.checkBrackets(model).getIsCorrect();
             assertFalse(result);
